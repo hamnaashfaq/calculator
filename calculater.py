@@ -164,7 +164,7 @@ buttons_data = [
 for data in buttons_data:
     # .get("colspan", 1) means: "use data['colspan'] if it exists,
     # otherwise just use 1 as a fallback." This avoids a crash for
-    # the buttons that don't define "colspan" at all.
+    # the buttons that don't define "colspan" at all
     colspan = data.get("colspan", 1)
 
     btn = Button(
