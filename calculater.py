@@ -104,11 +104,11 @@ display.grid(pady=(15, 20), ipady=20, padx=10, columnspan=6)
 NUM_BG = "#3F3D3D"     # background for plain digit buttons
 NUM_FG = "white"
 OP_BG = "#3A3A3C"     # background for + - x /
-OP_FG = "#FF9F0C"
+OP_FC = "#FF9F0C"
 CLEAR_BG = "#971212"
 EQUAL_BG = "#FF9F0A"
-EQUAL_FG = "#000000"
-BACKSPACE_FG="#0000FF"
+EQUAL_FC = "#000000"
+BACKSPACE_FG = "#0000FF"
 
 
 buttons_data = [
@@ -138,23 +138,23 @@ buttons_data = [
     {"label": "C", "row": 4, "col": 0, "bg": CLEAR_BG,
         "fg": "white", "command": lambda: Clear()},
     {"label": "=", "row": 4, "col": 2, "bg": EQUAL_BG,
-        "fg": EQUAL_FG, "command": lambda: getCalculation()},
+        "fg": EQUAL_FC, "command": lambda: getCalculation()},
 
     # operators
     {"label": "+", "row": 1, "col": 3, "bg": OP_BG,
-        "fg": OP_FG, "command": lambda: getOperator('+')},
+        "fg": OP_FC, "command": lambda: getOperator('+')},
     {"label": "-", "row": 2, "col": 3, "bg": OP_BG,
-        "fg": OP_FG, "command": lambda: getOperator('-')},
+        "fg": OP_FC, "command": lambda: getOperator('-')},
     {"label": "x", "row": 3, "col": 3, "bg": OP_BG,
-        "fg": OP_FG, "command": lambda: getOperator('*')},
+        "fg": OP_FC, "command": lambda: getOperator('*')},
     {"label": "/", "row": 4, "col": 3, "bg": OP_BG,
-        "fg": OP_FG, "command": lambda: getOperator('/')},
+        "fg": OP_FC, "command": lambda: getOperator('/')},
 
     # history (spans all 4 columns)
     {"label": "history", "row": 5, "col": 1, "colspan": 2,
-        "bg": OP_BG, "fg": OP_FG, "command": lambda: historyOp()},
+        "bg": OP_BG, "fg": OP_FC, "command": lambda: historyOp()},
     {"label": "⌫", "row": 5, "col": 0,
-     "bg": OP_BG, "fg":BACKSPACE_FG , "command": lambda: backspace()}
+     "bg": OP_BG, "fg": BACKSPACE_FG, "command": lambda: backspace()}
 ]
 
 
