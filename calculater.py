@@ -108,6 +108,8 @@ OP_FG = "#FF9F0C"
 CLEAR_BG = "#971212"
 EQUAL_BG = "#FF9F0A"
 EQUAL_FG = "#000000"
+BACKSPACE_FG="#0000FF"
+
 
 buttons_data = [
     # digits
@@ -152,7 +154,7 @@ buttons_data = [
     {"label": "history", "row": 5, "col": 1, "colspan": 2,
         "bg": OP_BG, "fg": OP_FG, "command": lambda: historyOp()},
     {"label": "⌫", "row": 5, "col": 0,
-     "bg": OP_BG, "fg": OP_FG, "command": lambda: backspace()}
+     "bg": OP_BG, "fg":BACKSPACE_FG , "command": lambda: backspace()}
 ]
 
 
